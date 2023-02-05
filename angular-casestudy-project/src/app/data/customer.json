@@ -1,0 +1,33 @@
+{
+  "customerType": [
+    {
+      "id": 1,
+      "name": "string"
+    },
+    {
+      "id": 2,
+      "name": "string"
+    },
+    {
+      "id": 3,
+      "name": "string"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "string",
+      "dateOfBirth": "string",
+      "gender": "string",
+      "idCard": "string",
+      "phoneNumber": "string",
+      "email": "string",
+      "address": "string",
+      "customerType": {
+        "id": 1,
+        "name": "string"
+      }
+    }
+
+  ]
+}

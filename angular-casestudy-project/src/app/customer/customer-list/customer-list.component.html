@@ -1,0 +1,128 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+      <div class="col-4">
+        <div class="container-fluid d-flex justify-content-center ">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end "><a class="text-decoration-none"
+                                                                href="http://localhost:8080">Home</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end"><a class="text-decoration-none"
+                                                               href="http://localhost:8080/customer">Customer</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+
+        <form class="d-flex" method="get" action="" method="POST" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+          <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
+          <select class="form-control me-2" name="customerType" formControlName="class">
+            <option *ngFor="let item of customerTypeList" [ngValue]="item.name">{{item.name}}</option>
+          </select>
+          <input class="btn btn-outline-success" type="submit" name="action" value="CHECK AVAILABILITY">
+          <input class="btn btn-outline-success" type="button" (click)="resest()" value="RESEST" STYLE="margin-left: 5px">
+
+        </form>
+      </div>
+    </nav>
+  </div>
+
+</div>
+
+<div class="container-fluid" style="background: url(../../../assets/images/slide_h13.jpg);
+background-size:cover; height: 700px">
+  <button class="btn btn-primary" style=" margin: 5px" [routerLink]="['/student/create']" >Thêm mới hợp đồng</button>
+
+  <table class="table table-bordered" style="background-color: #f8f9fa;color: black ; border-radius: 10px">
+    <thead style="background-color: #f8f9fa;color: black">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Giới tinh</th>
+      <th scope="col">Lớp</th>
+      <th scope="col">Sửa</th>
+      <th scope="col">Xoa</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customerList | paginate: { itemsPerPage: 5, currentPage: p }">
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.dateOfBirth}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phoneNumber}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.customerType?.name}}</td>
+      <td>
+        <button class="btn btn-outline-warning" [routerLink]="['/customer/update/',customer.id]">Sửa</button>
+      </td>
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="getDataDelete(customer)"
+        >
+          Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xoa phong tro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>ban mun xoa {{nameDelete}} khong</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
+          <button type="button" class="btn btn-primary" (click)="deleteCustomer(idDelete)">xoa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>
+</div>
+
+
+
