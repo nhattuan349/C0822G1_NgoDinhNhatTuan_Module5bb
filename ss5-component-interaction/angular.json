@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-casestudy-project": {
+    "ss5-component-interaction": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-casestudy-project",
+            "outputPath": "dist/ss5-component-interaction",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,12 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -68,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-casestudy-project:build"
+            "browserTarget": "ss5-component-interaction:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-casestudy-project:build:production"
+              "browserTarget": "ss5-component-interaction:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-casestudy-project:build"
+            "browserTarget": "ss5-component-interaction:build"
           }
         },
         "test": {
@@ -94,9 +91,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
@@ -116,19 +116,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-casestudy-project:serve"
+            "devServerTarget": "ss5-component-interaction:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-casestudy-project:serve:production"
+              "devServerTarget": "ss5-component-interaction:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-casestudy-project",
+  "defaultProject": "ss5-component-interaction",
   "cli": {
-    "analytics": "0501c550-5a4a-4982-803f-71ae5426610f"
+    "analytics": "41e8ac42-8aaf-4209-b0e2-1c0d69cb7771"
   }
 }
