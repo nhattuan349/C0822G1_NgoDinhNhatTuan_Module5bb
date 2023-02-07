@@ -35,7 +35,7 @@ export class CustomerListComponent implements OnInit {
       this.customerList =data;
       console.log(data)
     })
-    this.customerTypeService.getAllCustomeType().subscribe(data =>{
+    this.customerTypeService.getAllCustomerType().subscribe(data =>{
       this.customerTypeList = data;
     })
   }

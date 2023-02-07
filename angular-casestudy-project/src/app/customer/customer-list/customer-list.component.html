@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
@@ -45,7 +46,7 @@
 
         <form class="d-flex" method="get" action="" method="POST" [formGroup]="searchForm" (ngSubmit)="onSearch()">
           <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
-          <select class="form-control me-2" name="customerType" formControlName="class">
+          <select class="form-control me-2" name="customerType" formControlName="customerType">
             <option *ngFor="let item of customerTypeList" [ngValue]="item.name">{{item.name}}</option>
           </select>
           <input class="btn btn-outline-success" type="submit" name="action" value="CHECK AVAILABILITY">
@@ -57,7 +58,6 @@
   </div>
 
 </div>
-
 <div class="container-fluid" style="background: url(../../../assets/images/slide_h13.jpg);
 background-size:cover; height: 700px">
   <button class="btn btn-primary" style=" margin: 5px" [routerLink]="['/student/create']" >Thêm mới hợp đồng</button>
@@ -107,11 +107,11 @@ background-size:cover; height: 700px">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Xoa phong tro</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Xoa Customer</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>ban mun xoa {{nameDelete}} khong</p>
+          <p>bạn muốn xóa {{nameDelete}} không</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>

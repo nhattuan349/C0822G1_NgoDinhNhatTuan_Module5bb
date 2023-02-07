@@ -13,6 +13,7 @@ export class CustomerService {
 
   constructor(private httpClient: HttpClient) { }
 
+
   getAllCustomer(search_name: any = null, search_customer_type:string): Observable<Customer[]>{
     let url = CUSTOMER_URL;
     if (search_name != null){
@@ -23,7 +24,7 @@ export class CustomerService {
   }
 
   deleteCustomer(id: number): Observable<Customer>{
-    return this.httpClient.delete(`{CUSTOMER_URL}/{id}`);
+    return this.httpClient.delete<Customer>(`${CUSTOMER_URL}/${id}`)
   }
 
 }
