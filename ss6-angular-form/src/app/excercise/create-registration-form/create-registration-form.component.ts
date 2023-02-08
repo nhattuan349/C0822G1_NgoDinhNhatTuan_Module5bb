@@ -11,12 +11,13 @@ import {Customer} from "../model/customer";
 export class CreateRegistrationFormComponent implements OnInit {
 
   customer: Customer = {
-    id: 1,
-    username: 'Tuấn',
+    email: 'nhattuanc08@codegym.vn',
     password: '123',
-    dateOfBirth: '1995-28-08',
-    hobbies: 'cầu lông',
-    introduction: 'C0822G1'
+    confirmPassword: '123',
+    country: 'Quảng Nam',
+    age: '17',
+    gender: 'Nam',
+    phone: '0905999555'
   }
   @Output() customerSubmit = new EventEmitter();
 
@@ -24,12 +25,13 @@ export class CreateRegistrationFormComponent implements OnInit {
 
   constructor() {
     this.reactiveForm = new FormGroup({
-      id: new FormControl("", Validators.required),
-      username: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.required),
-      dateOfBirth: new FormControl("", Validators.required),
-      hobbies: new FormControl("", Validators.required),
-      introduction: new FormControl("", Validators.required),
+      email: new FormControl("", [Validators.required, Validators.pattern("\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b")]),
+      password: new FormControl("", [Validators.required, Validators.minLength(6)]),
+      confirmPassword: new FormControl("", [Validators.required, Validators.minLength(6)]),
+      country: new FormControl("", Validators.required),
+      age: new FormControl("", [Validators.required, Validators.min(18)]),
+      gender: new FormControl("", Validators.required),
+      phone: new FormControl("", [Validators.required,Validators.pattern("(84|0[3|5|7|8|9])+([0-9]{8})\\b")]),
     })
   }
 
@@ -42,5 +44,4 @@ export class CreateRegistrationFormComponent implements OnInit {
       this.customerSubmit.emit(this.reactiveForm.value)
     }
   }
-
 }

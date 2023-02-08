@@ -1,8 +1,9 @@
 export interface Customer {
-  id: number;
-  username: string;
+  email: string;
   password: string;
-  dateOfBirth: string;
-  hobbies: string;
-  introduction: string;
+  confirmPassword: string;
+  country: string;
+  age: string;
+  gender: string;
+  phone: string;
 }
