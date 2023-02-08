@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NameCardComponent } from './practice/name-card/name-card.component';
 import { ProgressBarComponent } from './practice/progress-bar/progress-bar.component';
 import { RatingBarComponent } from './excercise/rating-bar/rating-bar.component';
+import { CountdownTimerComponent } from './excercise/countdown-timer/countdown-timer.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { RatingBarComponent } from './excercise/rating-bar/rating-bar.component'
     AppComponent,
     NameCardComponent,
     ProgressBarComponent,
-    RatingBarComponent
+    RatingBarComponent,
+    CountdownTimerComponent
   ],
   imports: [
     BrowserModule,

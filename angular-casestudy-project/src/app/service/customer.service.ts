@@ -27,4 +27,17 @@ export class CustomerService {
     return this.httpClient.delete<Customer>(`${CUSTOMER_URL}/${id}`)
   }
 
+  saveCustomer(customer : any): Observable<Customer>{
+    return this.httpClient.post<Customer>(CUSTOMER_URL,customer)
+  }
+
+  findById(id: number): Observable<Customer>{
+    return this.httpClient.get<Customer>(`${CUSTOMER_URL}/${id}`)
+  }
+
+  updateCustomer(id: number, customer: Customer): Observable<Customer>{
+    return this.httpClient.patch<Customer>(`${CUSTOMER_URL}/${id}`,customer)
+  }
+
+
 }

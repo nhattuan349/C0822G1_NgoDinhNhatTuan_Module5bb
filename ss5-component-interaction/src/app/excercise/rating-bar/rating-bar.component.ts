@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {IRatingUnit} from "../model/irating-unit";
 
 
+
 @Component({
   selector: 'app-rating-bar',
   templateUrl: './rating-bar.component.html',
@@ -32,7 +33,7 @@ export class RatingBarComponent implements OnInit {
     }
   }
 
-  calculate(max:any, ratingValue:any) {
+  calculate(max: any, ratingValue:any) {
     this.ratingUnits = Array.from({length: max},
       (_, index) => ({
         value: index + 1,
@@ -44,17 +45,16 @@ export class RatingBarComponent implements OnInit {
     this.calculate(this.max, this.ratingValue);
   }
 
-  select(index:any) {
+  select(index: any) {
     this.ratingValue = index + 1;
     this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
     this.rateChange.emit(this.ratingValue);
   }
-  enter(index:any) {
+  enter(index : any) {
     this.ratingUnits.forEach((item, idx) => item.active = idx <= index);
   }
   reset() {
     this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
   }
-
 
 }
