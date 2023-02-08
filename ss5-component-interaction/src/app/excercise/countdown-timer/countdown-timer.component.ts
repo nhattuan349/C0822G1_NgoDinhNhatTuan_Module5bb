@@ -45,13 +45,13 @@ export class CountdownTimerComponent implements OnInit {
 
   stop() {
     this.clearTimer();
-    this.message = `Holding at T-${this.remainingTime} seconds`;
+    this.message = `Giữ ở mức  T-${this.remainingTime} giây`;
   }
 
   reset() {
     this.clearTimer();
     this.remainingTime = this.seconds;
-    this.message = `Click start button to start the Countdown`;
+    this.message = `Nhấp vào nút bắt đầu để bắt đầu đếm ngược`;
   }
 
   private countDown() {
