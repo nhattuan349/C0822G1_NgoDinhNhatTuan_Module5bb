@@ -1,0 +1,44 @@
+<div style="background: url(../../../assets/images/slide_h3.jpg); height: 1080px">
+
+  <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="customer/list">
+    Quay trở về trang chủ
+  </button>
+  <div class="d-block w-25 container mb-2"
+       style="width:500px ;margin: 20px auto;padding: 20px 20px;background-color: #f8f9fa; border-radius:10px ">
+    <form [formGroup]="reactiveForm" (ngSubmit)="createCustomerWithReactive()">
+      <legend>Đăng ký tài khoản mới</legend>
+      <div class="mb-3">
+        <label class="form-label">Nhập id</label>
+        <p style="color: red" *ngIf="reactiveForm.controls.id.hasError('required')">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="id">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập username</label>
+        <p style="color: red" *ngIf="reactiveForm.controls.username.hasError('required')">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="username">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập mật khẩu</label>
+        <p style="color: red" *ngIf="reactiveForm.controls.password.hasError('required')">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="password">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập ngày sinh</label>
+        <p style="color: red" *ngIf="reactiveForm.controls.dateOfBirth.hasError('required')">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="dateOfBirth">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sở thích</label>
+        <p style="color: red" *ngIf="reactiveForm.controls.hobbies.hasError('required')">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="hobbies">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Giới thiệu bản thân</label>
+        <p style="color: red" *ngIf="reactiveForm.controls.introduction.hasError('required')">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="introduction">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
