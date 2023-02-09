@@ -9,38 +9,47 @@
       <legend>Đăng ký tài khoản mới</legend>
       <div class="mb-3">
         <label class="form-label">Nhập email</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.email.hasError('required')">Không được để trống</p>
+        <p style="color: red" *ngIf="reactiveForm.controls.email.hasError('required') && reactiveForm.controls.email.dirty">Không được để trống</p>
         <input type="text" class="form-control" formControlName="email">
       </div>
       <div class="mb-3">
         <label class="form-label">Nhập password</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.password.hasError('required')">Không được để trống</p>
-        <input type="text" class="form-control" formControlName="password">
+        <p style="color: red" *ngIf="reactiveForm.controls.password.hasError('required') && reactiveForm.controls.password.dirty">Mật khẩu phải có ít nhất 6 ký tự</p>
+        <p style="color: red" *ngIf="reactiveForm.controls.password.hasError('minlength')">Mật khẩu phải có ít nhất 6 ký tự</p>        <input type="text" class="form-control" formControlName="password">
       </div>
       <div class="mb-3">
         <label class="form-label">Nhập confirmPassword</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.confirmPassword.hasError('required')">Không được để trống</p>
+        <p style="color: red" *ngIf="reactiveForm.controls.confirmPassword.hasError('required') && reactiveForm.controls.confirmPassword.dirty">Mật khẩu phải có ít nhất 6 ký tự</p>
+        <p style="color: red" *ngIf="reactiveForm.controls.confirmPassword.hasError('minlength')">Mật khẩu phải có ít nhất 6 ký tự</p>
+        <p style="color: red" *ngIf="reactiveForm.hasError('invalidPassword')">Mật khẩu không khớp</p>
         <input type="text" class="form-control" formControlName="confirmPassword">
       </div>
       <div class="mb-3">
         <label class="form-label">Nhập country</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.country.hasError('required')">Không được để trống</p>
-        <input type="text" class="form-control" formControlName="country">
+        <p style="color: red" *ngIf="reactiveForm.controls.country.hasError('required') && reactiveForm.controls.country.dirty">Chọn 1 option</p>
+        <select  formControlName="country" type="text">
+          <option [selected]="reactiveForm" value="vietnam">VietNam</option>
+          <option value="canada">Canada</option>
+          <option value="myanma">Myanma</option>
+        </select>
       </div>
       <div class="mb-3">
         <label class="form-label">Nhập age</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.age.hasError('required')">Không được để trống</p>
+        <p style="color: red" *ngIf="reactiveForm.controls.age.hasError('required') && reactiveForm.controls.country.dirty">Không được để trống</p>
         <input type="text" class="form-control" formControlName="age">
       </div>
       <div class="mb-3">
         <label class="form-label">Nhập gender</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.gender.hasError('required')">Không được để trống</p>
-        <input type="text" class="form-control" formControlName="gender">
+        <p style="color: red" *ngIf="reactiveForm.controls.gender.hasError('required')&& reactiveForm.controls.country.dirty">Chọn giới tính của bạn</p>
+        <select  formControlName="gender" type="text">
+          <option [selected]="reactiveForm" value="nam">Nam</option>
+          <option value="nu">Nu</option>
+        </select>
       </div>
       <div class="mb-3">
         <label class="form-label">Nhập phone</label>
-        <p style="color: red" *ngIf="reactiveForm.controls.phone.hasError('required')">Không được để trống</p>
-        <input type="text" class="form-control" formControlName="gender">
+        <p style="color: red" *ngIf="reactiveForm.controls.phone.hasError('required')&& reactiveForm.controls.country.dirty">Không được để trống</p>
+        <input type="text" class="form-control" formControlName="phone">
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
