@@ -1,0 +1,51 @@
+{
+  "productType": [
+    {
+      "id": 1,
+      "name": "thường"
+    },
+    {
+      "id": 2,
+      "name": "chuẩn"
+    },
+    {
+      "id": 3,
+      "name": "cao cấp"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "máy quạt",
+      "stock": "trong kho còn 23",
+      "price": "22,9",
+      "brands": "asia",
+      "color": "green",
+      "productType": {
+        "id": 1,
+        "name": "thường"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Thước",
+      "stock": "trong kho còn 12",
+      "price": "1",
+      "brands": "Kim Nguyen",
+      "color": "white",
+      "productType": {
+        "id": 2,
+        "name": "chuẩn"
+      }
+    },
+    {
+      "id": "ádasd",
+      "name": "ádsad",
+      "stock": "ádsad",
+      "brands": "ád",
+      "price": "ád",
+      "color": "ád",
+      "productType": null
+    }
+  ]
+}

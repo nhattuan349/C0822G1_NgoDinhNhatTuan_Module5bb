@@ -1,0 +1,56 @@
+<div style="background: url(../../../assets/images/slide_h3.jpg); height: 1080px">
+
+  <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="">
+    Quay trở về trang chủ
+  </button>
+  <div class="d-block w-25 container mb-2"
+       style="width:500px ;margin: 20px auto;padding: 20px 20px;background-color: #f8f9fa; border-radius:10px ">
+    <form [formGroup]="productForm" (ngSubmit)="submit()">
+      <legend>Đăng ký sản phẩm mới</legend>
+      <div class="mb-3">
+        <label class="form-label">Nhập id</label>
+        <p style="color: red" *ngIf="productForm.controls.id.hasError('required') && productForm.controls.id.dirty">
+          Không được để trống</p>
+        <input type="text" class="form-control" formControlName="id">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập tên sản phẩm</label>
+        <p style="color: red" *ngIf="productForm.controls.name.hasError('required') && productForm.controls.name.dirty">
+          Không được để trống</p>
+        <input type="text" class="form-control" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập số hàng trong kho</label>
+        <p style="color: red"
+           *ngIf="productForm.controls.stock.hasError('required') && productForm.controls.stock.dirty">Không được để
+          trống</p>
+        <input type="text" class="form-control" formControlName="stock">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập nhãn hiệu</label>
+        <p style="color: red"
+           *ngIf="productForm.controls.brands.hasError('required') && productForm.controls.brands.dirty">Không được để
+          trống</p>
+        <input type="text" class="form-control" formControlName="brands">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập giá</label>
+        <p style="color: red"
+           *ngIf="productForm.controls.price.hasError('required') && productForm.controls.price.dirty">Không được để
+          trống</p>
+        <input type="text" class="form-control" formControlName="price">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nhập màu</label>
+        <p style="color: red"
+           *ngIf="productForm.controls.color.hasError('required') && productForm.controls.color.dirty">Không được để
+          trống</p>
+        <input type="text" class="form-control" formControlName="color">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
