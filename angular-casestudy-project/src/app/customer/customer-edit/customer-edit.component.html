@@ -56,7 +56,7 @@
         <legend>Thêm mới học sinh</legend>
         <div class="mb-3">
           <label class="form-label">Loại Khách hàng</label>
-          <select class="form-control form-control-lg" formControlName="class" [compareWith]="comparaFn" >
+          <select class="form-control form-control-lg" formControlName="customerType" [compareWith]="comparaFn" >
             <option *ngFor="let item of customerTypeList" [ngValue]="item" > {{item.name}}</option>
           </select>
         </div>
@@ -74,8 +74,50 @@
                 *ngIf="customerForm.controls.dateOfBirth.hasError('required')&&customerForm.controls.dateOfBirth.touched">
             Không được để trống
           </span>
-          <input type="text" class="form-control" formControlName="dateOfBirth">
+          <input type="text" class="form-control" formControlName="gender">
         </div>
+        <div class="mb-3">
+          <label class="form-label" >gender</label>
+          <span style="color: red"
+                *ngIf="customerForm.controls.gender.hasError('required')&&customerForm.controls.gender.touched">
+            Không được để trống
+          </span>
+          <input type="text" class="form-control" formControlName="gender">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" >idCard</label>
+          <span style="color: red"
+                *ngIf="customerForm.controls.idCard.hasError('required')&&customerForm.controls.idCard.touched">
+            Không được để trống
+          </span>
+          <input type="text" class="form-control" formControlName="idCard">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" >phoneNumber</label>
+          <span style="color: red"
+                *ngIf="customerForm.controls.phoneNumber.hasError('required')&&customerForm.controls.phoneNumber.touched">
+            Không được để trống
+          </span>
+          <input type="text" class="form-control" formControlName="phoneNumber">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" >email</label>
+          <span style="color: red"
+                *ngIf="customerForm.controls.email.hasError('required')&&customerForm.controls.email.touched">
+            Không được để trống
+          </span>
+          <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" >address</label>
+          <span style="color: #ff0000"
+                *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
+          <input type="text" class="form-control" formControlName="address">
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Submit</button>
       </form>
     </div>
 

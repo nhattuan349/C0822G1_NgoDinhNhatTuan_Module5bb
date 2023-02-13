@@ -44,7 +44,7 @@ export class CustomerCreateComponent implements OnInit {
     console.log(customer)
     this.customerService.saveCustomer(customer).subscribe(()=>{
       this.customerForm.reset();
-      this.router.navigate(['customer/list'])
+      this.router.navigate(['/customer/list'])
     })
   }
 }

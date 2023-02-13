@@ -45,7 +45,7 @@
       <div class="col-8">
 
         <form class="d-flex" method="get" action="" method="POST" [formGroup]="searchForm" (ngSubmit)="onSearch()">
-          <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
+              <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
           <select class="form-control me-2" name="customerType" formControlName="customerType">
             <option *ngFor="let item of customerTypeList" [ngValue]="item.name">{{item.name}}</option>
           </select>
@@ -120,7 +120,7 @@ background-size:cover; height: 700px">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
-          <button type="button" class="btn btn-primary" (click)="deleteCustomer(idDelete)">xoa</button>
+          <button type="button" class="btn btn-primary" (click)="deleteCustomer(idDelete)" data-bs-dismiss="modal">xoa</button>
         </div>
       </div>
     </div>

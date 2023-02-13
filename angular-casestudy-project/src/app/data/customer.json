@@ -23,20 +23,6 @@
   ],
   "customer": [
     {
-      "id": 2,
-      "name": "Nguyễn Thị Hào",
-      "dateOfBirth": "1970-11-07",
-      "gender": "0",
-      "idCard": "643431213",
-      "phoneNumber": "0945423362",
-      "email": "thihao07@gmail.com",
-      "address": "23 Nguyễn Hoàng, Đà Nẵng",
-      "customerType": {
-        "id": 5,
-        "name": "Member"
-      }
-    },
-    {
       "id": 1,
       "name": "Phạm Xuân Diệu",
       "dateOfBirth": "1992-08-08",
@@ -48,6 +34,20 @@
       "customerType": {
         "id": 3,
         "name": "Gold"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Thị Hào",
+      "dateOfBirth": "1970-11-07",
+      "gender": "0",
+      "idCard": "643431213",
+      "phoneNumber": "0945423362",
+      "email": "thihao07@gmail.com",
+      "address": "23 Nguyễn Hoàng, Đà Nẵng",
+      "customerType": {
+        "id": 5,
+        "name": "Member"
       }
     },
     {
@@ -175,6 +175,17 @@
         "id": 1,
         "name": "Diamond"
       }
+    },
+    {
+      "id": "8hFiCPA",
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": null
     }
   ]
 }

@@ -4,6 +4,7 @@ import {CustomerType} from "../../model/customerType";
 import {Customer} from "../../model/customer";
 import {CustomerService} from "../../service/customer.service";
 import {CustomerTypeService} from "../../service/customer-type.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-customer-list',
@@ -24,7 +25,7 @@ export class CustomerListComponent implements OnInit {
   p: number = 0
 
   constructor(private customerService: CustomerService,
-              private customerTypeService: CustomerTypeService) { }
+              private customerTypeService: CustomerTypeService,private router : Router) { }
 
   ngOnInit(): void {
     this.getAll();

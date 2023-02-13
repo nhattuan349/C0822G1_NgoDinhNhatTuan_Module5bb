@@ -5,7 +5,10 @@
 export const environment = {
   production: false,
   apiUrlCustomer: 'http://localhost:3000/customer',
-  apiUrlCustomerType:'http://localhost:3000/customerType'
+  apiUrlCustomerType:'http://localhost:3000/customerType',
+  apiUrlFacility: 'http://localhost:3000/facility',
+  apiUrlRentType:'http://localhost:3000/rentType',
+  apiUrlFacilityType:'http://localhost:3000/facilityType'
 };
 
 /*

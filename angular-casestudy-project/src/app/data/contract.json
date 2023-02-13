@@ -1,19 +1,226 @@
 {
-  "posts": [
+  "customer": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Phạm Xuân Diệu"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Thị Hào"
+    },
+    {
+      "id": 3,
+      "name": "Trương Đình Nghệ"
     }
+    {
+      "id": 4,
+      "name": "Dương Văn Quan"
+    },
+    {
+      "id": 5,
+      "name": "Hoàng Trần Nhi Nhi"
+    },
+    {
+      "id": 6,
+      "name": "Tôn Nữ Mộc Châu"
+    }
+
   ],
-  "comments": [
+  "facility": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Villa Beach Front"
+    },
+    {
+      "id": 2,
+      "name": "House Princess 01"
+    },
+    {
+      "id": 3,
+      "name": "Room Twin 01"
+    },
+    {
+      "id": 4,
+      "name": "Villa No Beach Front"
+    },
+    {
+      "id": 5,
+      "name": "House Princess 02"
+    },
+    {
+      "id": 6,
+      "name": "Room Twin 02"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "contract": [
+    {
+      "id": 1,
+      "startDate": "2020-12-08",
+      "endDate": "2020-12-08",
+      "deposit": "0",
+      "customer": {
+        "id": 1,
+        "name": "Nguyễn Thị Hào"
+      },
+      "facility": {
+        "id": 3,
+        "name": "Room Twin 01"
+      }
+    },
+    {
+      "id": 2,
+      "startDate": "2020-07-14",
+      "endDate": "2020-07-21",
+      "deposit": "200000",
+      "customer": {
+        "id": 1,
+        "name": "Trương Đình Nghệ"
+      },
+      "facility": {
+        "id": 3,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 3,
+      "startDate": "2021-03-15",
+      "endDate": "2021-03-17",
+      "deposit": "50000",
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "facility": {
+        "id": 2,
+        "name": "House Princess 01"
+      }
+    },
+    {
+      "id": 4,
+      "startDate": "2021-01-14",
+      "endDate": "2021-01-18",
+      "deposit": "100000",
+      "customer": {
+        "id": 5,
+        "name": "Hoàng Trần Nhi Nhi"
+      },
+      "facility": {
+        "id": 5,
+        "name": "House Princess 02"
+      }
+    },
+    {
+      "id": 5,
+      "startDate": "2021-07-14",
+      "endDate": "2021-07-15",
+      "deposit": "0",
+      "customer": {
+        "id": 2,
+        "name": "Phạm Xuân Diệu"
+      },
+      "facility": {
+        "id": 6,
+        "name": "Room Twin 02"
+      }
+    },
+    {
+      "id": 6,
+      "startDate": "2021-06-01",
+      "endDate": "2021-06-03",
+      "deposit": "0",
+      "customer": {
+        "id": 7,
+        "name": "Nguyễn Mỹ Kim"
+      },
+      "facility": {
+        "id": 6,
+        "name": "Room Twin 02"
+      }
+    },
+    {
+      "id": 7,
+      "startDate": "2021-09-02",
+      "endDate": "2021-09-05",
+      "deposit": "100000",
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "facility": {
+        "id": 4,
+        "name": "Villa No Beach Front"
+      }
+    },
+    {
+      "id": 8,
+      "startDate": "2021-06-17",
+      "endDate": "2021-06-18",
+      "deposit": "150000",
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 9,
+      "startDate": "2020-11-19",
+      "endDate": "2020-11-19",
+      "deposit": "0",
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "facility": {
+        "id": 3,
+        "name": "Room Twin 01"
+      }
+    },
+    {
+      "id": 10,
+      "startDate": "2021-04-12",
+      "endDate": "2021-04-14",
+      "deposit": "0",
+      "customer": {
+        "id": 3,
+        "name": "Trương Đình Nghệ"
+      },
+      "facility": {
+        "id": 5,
+        "name": "House Princess 02"
+      }
+    },
+    {
+      "id": 11,
+      "startDate": "2021-04-25",
+      "endDate": "2021-04-25",
+      "deposit": "0",
+      "customer": {
+        "id": 2,
+        "name": "Phạm Xuân Diệu"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 12,
+      "startDate": "2021-05-25",
+      "endDate": "2021-05-27",
+      "deposit": "0",
+      "customer": {
+        "id": 10,
+        "name": "Nguyễn Tâm Đắc"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    }
+
+  ]
 }

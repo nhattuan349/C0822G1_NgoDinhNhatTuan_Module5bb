@@ -21,7 +21,6 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle float-end" href="#" role="button"
                    data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +36,6 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-
             </ul>
           </div>
         </div>
@@ -46,7 +44,7 @@
     </nav>
   </div>
 </div>
-<div style="background: url(../../../assets/images/slide_h3.jpg); height: 1080px">
+<div  style="background: url(../../../assets/images/slide_h3.jpg); height: 1080px">
 
   <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="customer/list">
     Quay trở về trang chủ
@@ -58,7 +56,7 @@
       <div class="mb-3">
         <label class="form-label"> Loại Khách hàng</label>
         <select class="form-control form-control-lg" formControlName="customerType">
-          <option *ngFor="let item of customerType" [ngValue]="item"> {{item.name}} ></option>
+          <option *ngFor="let item of customerType" [ngValue]="item"> {{item.name}} </option>
         </select>
       </div>
       <div class="mb-3">
