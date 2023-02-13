@@ -5,6 +5,7 @@ import {ProductTypeService} from "../../service/product-type.service";
 import {Router} from "@angular/router";
 import {ProductType} from "../../model/product-type";
 import {CustomerType} from "../../../../../angular-casestudy-project/src/app/model/customerType";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-product-list',
@@ -12,11 +13,18 @@ import {CustomerType} from "../../../../../angular-casestudy-project/src/app/mod
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+
+  searchForm: FormGroup = new FormGroup({
+    name: new FormControl(""),
+    productType: new FormControl("")
+  })
+
   productList: Product[] = []
   productTypeList: ProductType[] = []
   product: Product = {};
   idDelete: number = 0;
   nameDelete?: string = "";
+  p: number=0;
 
   constructor(private productService: ProductService,
               private productTypeService: ProductTypeService) {
@@ -28,7 +36,7 @@ export class ProductListComponent implements OnInit {
   }
 
   getAll(){
-    this.productService.getAllProduct().subscribe(data=>{
+    this.productService.getAllProduct("","").subscribe(data=>{
       console.log(data)
       this.productList =data
     },error => {
@@ -36,13 +44,13 @@ export class ProductListComponent implements OnInit {
     },() =>{
 
     })
-    // this.productTypeService.getAllProductType().subscribe(data=>{
-    //   console.log(data)
-    //   this.productTypeList = data
-    // },error => {
-    //
-    // },() => {
-    // })
+    this.productTypeService.getAllProductType().subscribe(data=>{
+      console.log(data)
+      this.productTypeList = data
+    },error => {
+
+    },() => {
+    })
   }
 
   getDataDelete(product: ProductType){
@@ -58,6 +66,16 @@ export class ProductListComponent implements OnInit {
     })
   }
 
+  onSearch(){
+    this.productService.getAllProduct(this.searchForm.value.name,this.searchForm.value.productType).subscribe(data=>{
+      this.productList =data
+      console.log(data)
+    })
 
+  }
+
+  resest(){
+    this.ngOnInit()
+  }
 
 }

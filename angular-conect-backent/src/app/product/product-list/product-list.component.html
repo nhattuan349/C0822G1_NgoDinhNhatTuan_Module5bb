@@ -1,0 +1,123 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+      <div class="col-4">
+        <div class="container-fluid d-flex justify-content-center ">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end "><a class="text-decoration-none"
+                                                                href="http://localhost:8080">Home</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end"><a class="text-decoration-none"
+                                                               href="http://localhost:8080/customer">Customer</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+
+        <form class="d-flex" method="get" action=""  method="post" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+          <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
+          <select class="form-control me-2" name="productType" formControlName="productType">
+            <option></option>
+            <option *ngFor="let item of productTypeList" [ngValue]="item.name">{{item.name}}</option>
+          </select>
+          <input class="btn btn-outline-success" type="submit" name="action" value="CHECK AVAILABILITY">
+          <input class="btn btn-outline-success" type="button" (click)="resest()" value="RESEST" STYLE="margin-left: 5px">
+        </form>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="container-fluid" style="background: url(../../../assets/images/slide_h13.jpg);
+background-size:cover; height: 700px">
+
+  <button class="btn btn-info" routerLink="/product/create"> Thêm mới</button>
+  <table class="table table-bordered" style="background-color: #f8f9fa;color: black ; border-radius: 10px">
+    <thead style="background-color: #f8f9fa;color: black">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên sản phẩm</th>
+      <th scope="col">số lượng hàng trong kho</th>
+      <th scope="col">giá</th>
+      <th scope="col">nhãn hiệu</th>
+      <th scope="col">màu </th>
+      <th scope="col">loại sản phẩm </th>
+      <th scope="col">Sửa </th>
+      <th scope="col">Xóa </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of productList | paginate: { itemsPerPage: 5, currentPage: p}">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.stock}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.brands}}</td>
+      <td>{{product.color}}</td>
+      <td>{{product.productType?.name}}</td>
+
+      <td>
+        <button class="btn btn-outline-warning" [routerLink]="['/product/update',product.id]">Sửa</button>
+      </td>
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="getDataDelete(product)">
+          Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xoa Customer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>bạn muốn xóa {{nameDelete}} không</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteProduct(idDelete)">xoa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>
+</div>

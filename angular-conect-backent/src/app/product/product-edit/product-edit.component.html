@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <div class="container-fluid d-flex justify-content-center ">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end "><a class="text-decoration-none"
+                                                                href="http://localhost:8080">Home</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end"><a class="text-decoration-none"
+                                                               href="http://localhost:8080/customer">Customer</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </nav>
+  </div>
+</div>
+<div style="background: url(../../../assets/images/slide_h3.jpg); height: 1080px">
+  <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="">
+    Quay về trang chủ
+  </button>
+  <div class="d-block w-25  container mb-2  "
+       style="width:500px ;margin: 20px auto;padding: 20px 20px;background-color: #f8f9fa; border-radius:10px ">
+    <div *ngIf="productForm!=undefined">
+      <form [formGroup]="productForm" (ngSubmit)="update(id)">
+        <legend>Sửa sản phẩm</legend>
+        <div class="mb-3">
+          <label class="form-label">Loại Lớp</label>
+          <select class="form-control form-control-lg" formControlName="productType" [compareWith]="comparaFn">
+            <option *ngFor="let item of productTypeList" [ngValue]="item">{{item.name}}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" formControlName="stock">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" formControlName="price">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" formControlName="brands">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" formControlName="color">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -18,8 +18,9 @@ export class ProductEditComponent implements OnInit {
     brands: new FormControl(),
     price: new FormControl(),
     color: new FormControl(),
+    productType: new FormControl()
   })
-
+  productTypeList : ProductType[] = []
   productList: ProductType[] = [];
   id: number = 0;
 
@@ -37,7 +38,7 @@ export class ProductEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.productTypeService.getAllProductType().subscribe(data =>{
-    this.productList = data
+    this.productTypeList = data
       console.log(data)
     })
   }
@@ -50,7 +51,7 @@ export class ProductEditComponent implements OnInit {
     })
   }
 
-  comparaFn(o1: ProductType, o2: ProductType): boolean{
+  comparaFn(o1: ProductType, o2: ProductType): boolean {
     return o1 && o2 ? o1.id === o2.id : o1 === o2;
   }
 

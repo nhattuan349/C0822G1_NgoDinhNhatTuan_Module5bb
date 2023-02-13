@@ -8,6 +8,12 @@
     <form [formGroup]="productForm" (ngSubmit)="submit()">
       <legend>Đăng ký sản phẩm mới</legend>
       <div class="mb-3">
+        <label class="form-label">Class</label>
+        <select class="form-control form-control-lg" formControlName="class">
+          <option *ngFor="let item of productType" [ngValue]="item"> {{item.name}}</option>
+        </select>
+      </div>
+      <div class="mb-3">
         <label class="form-label">Nhập id</label>
         <p style="color: red" *ngIf="productForm.controls.id.hasError('required') && productForm.controls.id.dirty">
           Không được để trống</p>

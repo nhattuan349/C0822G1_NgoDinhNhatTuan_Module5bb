@@ -16,7 +16,7 @@
   "product": [
     {
       "id": 1,
-      "name": "máy quạt",
+      "name": "máy quạt hơi nước",
       "stock": "trong kho còn 23",
       "price": "22,9",
       "brands": "asia",
@@ -39,13 +39,40 @@
       }
     },
     {
-      "id": "ádasd",
+      "id": "3",
       "name": "ádsad",
       "stock": "ádsad",
       "brands": "ád",
       "price": "ád",
       "color": "ád",
-      "productType": null
+      "productType": {
+        "id": 2,
+        "name": "chuẩn"
+      }
+    },
+    {
+      "id": "4",
+      "name": "kjlj",
+      "stock": "ádsad",
+      "brands": "sdsad",
+      "price": "ádsad",
+      "color": "ád",
+      "productType": {
+        "id": 2,
+        "name": "chuẩn"
+      }
+    },
+    {
+      "id": "6",
+      "name": "qưewqe",
+      "stock": "ưqewqe",
+      "brands": "ưqewqe",
+      "price": "ưqewqe",
+      "color": "ưqewqe",
+      "productType": {
+        "id": 2,
+        "name": "chuẩn"
+      }
     }
   ]
 }

@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ProductCreateComponent} from "./component/product-create/product-create.component";
-import {ProductListComponent} from "./component/product-list/product-list.component";
-import {ProductEditComponent} from "./component/product-edit/product-edit.component";
+import {ProductCreateComponent} from "./product/product-create/product-create.component";
+import {ProductListComponent} from "./product/product-list/product-list.component";
+import {ProductEditComponent} from "./product/product-edit/product-edit.component";
 
 const routes: Routes = [
-  {path:"", component: ProductListComponent},
-  {path:"create", component: ProductCreateComponent},
-  {path:"update/:id", component: ProductEditComponent},
 ];
 
 @NgModule({
