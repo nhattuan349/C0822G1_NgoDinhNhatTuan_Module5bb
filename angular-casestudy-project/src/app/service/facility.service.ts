@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
 import {Facility} from "../model/facility";
-import {Customer} from "../model/customer";
+
 
     const FACILITY_URL =`${environment.apiUrlFacility}`
 
@@ -20,7 +20,7 @@ export class FacilityService {
       url +='?name_like='+ search_name +'&rentTypeId.name_like='+search_rent_type+'&facilityTypeId.name_like='+search_facility_type;
     }
     console.log(url)
-    return this.httpClient.get<Facility[]>(url);
+    return this.httpClient.get<Facility[]>(FACILITY_URL);
   }
 
   deleteFacility(id: number){

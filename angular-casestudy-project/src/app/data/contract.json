@@ -11,7 +11,7 @@
     {
       "id": 3,
       "name": "Trương Đình Nghệ"
-    }
+    },
     {
       "id": 4,
       "name": "Dương Văn Quan"
@@ -24,7 +24,6 @@
       "id": 6,
       "name": "Tôn Nữ Mộc Châu"
     }
-
   ],
   "facility": [
     {
@@ -58,11 +57,11 @@
       "startDate": "2020-12-08",
       "endDate": "2020-12-08",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 1,
         "name": "Nguyễn Thị Hào"
       },
-      "facility": {
+      "facilityId": {
         "id": 3,
         "name": "Room Twin 01"
       }
@@ -72,11 +71,11 @@
       "startDate": "2020-07-14",
       "endDate": "2020-07-21",
       "deposit": "200000",
-      "customer": {
+      "customerId": {
         "id": 1,
         "name": "Trương Đình Nghệ"
       },
-      "facility": {
+      "facilityId": {
         "id": 3,
         "name": "Villa Beach Front"
       }
@@ -86,11 +85,11 @@
       "startDate": "2021-03-15",
       "endDate": "2021-03-17",
       "deposit": "50000",
-      "customer": {
+      "customerId": {
         "id": 4,
         "name": "Dương Văn Quan"
       },
-      "facility": {
+      "facilityId": {
         "id": 2,
         "name": "House Princess 01"
       }
@@ -100,11 +99,11 @@
       "startDate": "2021-01-14",
       "endDate": "2021-01-18",
       "deposit": "100000",
-      "customer": {
+      "customerId": {
         "id": 5,
         "name": "Hoàng Trần Nhi Nhi"
       },
-      "facility": {
+      "facilityId": {
         "id": 5,
         "name": "House Princess 02"
       }
@@ -114,11 +113,11 @@
       "startDate": "2021-07-14",
       "endDate": "2021-07-15",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 2,
         "name": "Phạm Xuân Diệu"
       },
-      "facility": {
+      "facilityId": {
         "id": 6,
         "name": "Room Twin 02"
       }
@@ -128,11 +127,11 @@
       "startDate": "2021-06-01",
       "endDate": "2021-06-03",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 7,
         "name": "Nguyễn Mỹ Kim"
       },
-      "facility": {
+      "facilityId": {
         "id": 6,
         "name": "Room Twin 02"
       }
@@ -142,11 +141,11 @@
       "startDate": "2021-09-02",
       "endDate": "2021-09-05",
       "deposit": "100000",
-      "customer": {
+      "customerId": {
         "id": 4,
         "name": "Dương Văn Quan"
       },
-      "facility": {
+      "facilityId": {
         "id": 4,
         "name": "Villa No Beach Front"
       }
@@ -156,11 +155,11 @@
       "startDate": "2021-06-17",
       "endDate": "2021-06-18",
       "deposit": "150000",
-      "customer": {
+      "customerId": {
         "id": 4,
         "name": "Dương Văn Quan"
       },
-      "facility": {
+      "facilityId": {
         "id": 1,
         "name": "Villa Beach Front"
       }
@@ -170,11 +169,11 @@
       "startDate": "2020-11-19",
       "endDate": "2020-11-19",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 4,
         "name": "Dương Văn Quan"
       },
-      "facility": {
+      "facilityId": {
         "id": 3,
         "name": "Room Twin 01"
       }
@@ -184,11 +183,11 @@
       "startDate": "2021-04-12",
       "endDate": "2021-04-14",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 3,
         "name": "Trương Đình Nghệ"
       },
-      "facility": {
+      "facilityId": {
         "id": 5,
         "name": "House Princess 02"
       }
@@ -198,11 +197,11 @@
       "startDate": "2021-04-25",
       "endDate": "2021-04-25",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 2,
         "name": "Phạm Xuân Diệu"
       },
-      "facility": {
+      "facilityId": {
         "id": 1,
         "name": "Villa Beach Front"
       }
@@ -212,15 +211,22 @@
       "startDate": "2021-05-25",
       "endDate": "2021-05-27",
       "deposit": "0",
-      "customer": {
+      "customerId": {
         "id": 10,
         "name": "Nguyễn Tâm Đắc"
       },
-      "facility": {
+      "facilityId": {
         "id": 1,
         "name": "Villa Beach Front"
       }
+    },
+    {
+      "id": "13",
+      "startDate": "",
+      "endDate": "1995-02-02",
+      "deposit": "100000",
+      "customerId": "",
+      "facilityId": ""
     }
-
   ]
 }

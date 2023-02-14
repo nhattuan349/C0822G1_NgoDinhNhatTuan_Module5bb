@@ -44,7 +44,7 @@
     </nav>
   </div>
 </div>
-<div  style="background: url(../../../assets/images/slide_h3.jpg); height: 1500px">
+<div style="background: url(../../../assets/images/slide_h3.jpg); height: 1500px">
 
   <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="/facility/list">
     Quay trở về trang chủ
@@ -68,42 +68,82 @@
       <div class="mb-3">
         <label class="form-label">Id</label>
         <input type="text" class="form-control" formControlName="id">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">Name</label>
         <input type="text" class="form-control" formControlName="name">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">area</label>
         <input type="text" class="form-control" formControlName="area">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">cost</label>
         <input type="text" class="form-control" formControlName="cost">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">maxPeople</label>
         <input type="text" class="form-control" formControlName="maxPeople">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">standardRoom</label>
         <input type="text" class="form-control" formControlName="standardRoom">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">descriptionOtherConvenience</label>
         <input type="text" class="form-control" formControlName="descriptionOtherConvenience">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">poolArea</label>
         <input type="text" class="form-control" formControlName="poolArea">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">numberOfFloor</label>
         <input type="text" class="form-control" formControlName="numberOfFloor">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">facilityFree</label>
         <input type="text" class="form-control" formControlName="facilityFree">
+        <span style="color: #ff0000"
+              *ngIf="facilityForm.controls.address.hasError('required')&&facilityForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

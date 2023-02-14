@@ -46,7 +46,7 @@
 </div>
 <div  style="background: url(../../../assets/images/slide_h3.jpg); height: 1080px">
 
-  <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="customer/list">
+  <button class="btn btn-dark text-white" style="margin:5px;color: #4f2216" routerLink="/customer/list">
     Quay trở về trang chủ
   </button>
   <div class="d-block w-25 container mb-2"
@@ -62,34 +62,66 @@
       <div class="mb-3">
         <label class="form-label">Id</label>
         <input type="text" class="form-control" formControlName="id">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">Name</label>
         <input type="text" class="form-control" formControlName="name">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">Date Of Birth</label>
         <input type="text" class="form-control" formControlName="dateOfBirth">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">Gender</label>
         <input type="text" class="form-control" formControlName="gender">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">Id Card</label>
         <input type="text" class="form-control" formControlName="idCard">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">Number phone</label>
         <input type="text" class="form-control" formControlName="phoneNumber">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">email</label>
         <input type="text" class="form-control" formControlName="email">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <div class="mb-3">
         <label class="form-label">address</label>
         <input type="text" class="form-control" formControlName="address">
+        <span style="color: #ff0000"
+              *ngIf="customerForm.controls.address.hasError('required')&&customerForm.controls.address.touched">
+            Không được để trống
+          </span>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

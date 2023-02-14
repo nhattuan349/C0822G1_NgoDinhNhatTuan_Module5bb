@@ -8,7 +8,8 @@ export const environment = {
   apiUrlCustomerType:'http://localhost:3000/customerType',
   apiUrlFacility: 'http://localhost:3000/facility',
   apiUrlRentType:'http://localhost:3000/rentType',
-  apiUrlFacilityType:'http://localhost:3000/facilityType'
+  apiUrlFacilityType:'http://localhost:3000/facilityType',
+  apiUrlContract:'http://localhost:3000/contract'
 };
 
 /*

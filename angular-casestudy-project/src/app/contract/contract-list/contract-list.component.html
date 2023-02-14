@@ -1,1 +1,128 @@
-<p>contract-list works!</p>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+      <div class="col-4">
+        <div class="container-fluid d-flex justify-content-center ">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end "><a class="text-decoration-none"
+                                                                href="http://localhost:8080">Home</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end"><a class="text-decoration-none"
+                                                               href="http://localhost:8080/customer">Contract</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+
+        <form class="d-flex"  [formGroup]="searchForm" (ngSubmit)="onSearch()">
+          <input placeholder="startDate" class="form-control me-2" type="text" name="startDate" formControlName="startDate">
+          <input placeholder="endDate" class="form-control me-2" type="text" name="endDate" formControlName="endDate">
+          <select class="form-control me-2" name="customer" formControlName="customer">
+            <option></option>
+            <option *ngFor="let item of customerList" [ngValue]="item.name">{{item.name}}</option>
+          </select>
+          <select class="form-control me-2" name="facility" formControlName="facility">
+            <option></option>
+            <option *ngFor="let item of facilityList" [ngValue]="item.name">{{item.name}}</option>
+          </select>
+          <input class="btn btn-outline-success" type="submit" name="action" value="CHECK AVAILABILITY">
+          <input class="btn btn-outline-success" type="button" (click)="reset()" value="RESEST" STYLE="margin-left: 5px">
+        </form>
+      </div>
+    </nav>
+  </div>
+
+</div>
+<div class="container-fluid" style="background: url(../../../assets/images/slide_h13.jpg);
+background-size:cover; height: 700px">
+  <button class="btn btn-primary" style=" margin: 5px" [routerLink]="['/contract/create']" >Thêm mới hợp đồng</button>
+
+  <table class="table table-bordered" style="background-color: #f8f9fa;color: black ; border-radius: 10px">
+    <thead style="background-color: #f8f9fa;color: black">
+    <tr>
+      <th scope="col">Mã Hợp đồng</th>
+      <th scope="col">Tên Khách Hàng</th>
+      <th scope="col">Tên Dịch vụ</th>
+      <th scope="col">Ngày làm hợp đồng</th>
+      <th scope="col">Ngày kết thúc</th>
+      <th scope="col">Tiền đặt cọc</th>
+      <th scope="col">Xoa</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contract of contractList | paginate: { itemsPerPage: 5, currentPage: p }">
+      <td>{{contract.id}}</td>
+      <td>{{contract.customerId?.name}}</td>
+      <td>{{contract.facilityId?.name}}</td>
+      <td>{{contract.startDate}}</td>
+      <td>{{contract.endDate}}</td>
+      <td>{{contract.deposit}}</td>
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="getDataDelete(contract)"
+        >
+          Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xoa Customer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>bạn muốn xóa {{nameDelete}} không</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
+          <button type="button" class="btn btn-primary" (click)="deleteContract(idDelete)" data-bs-dismiss="modal">xoa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>
+</div>
+
+
+

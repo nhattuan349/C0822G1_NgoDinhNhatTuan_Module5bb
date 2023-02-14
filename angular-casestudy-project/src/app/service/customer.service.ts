@@ -16,10 +16,12 @@ export class CustomerService {
 
   getAllCustomer(search_name: any = null, search_customer_type:string): Observable<Customer[]>{
     let url = CUSTOMER_URL;
+    debugger
     if (search_name != null){
       url +='?name_like='+ search_name+'&customerType.name_like='+search_customer_type;
     }
     console.log(url)
+    debugger
     return this.httpClient.get<Customer[]>(url);
   }
 
@@ -40,4 +42,7 @@ export class CustomerService {
   }
 
 
+  getAllCustomerContract(): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>(CUSTOMER_URL)
+  }
 }

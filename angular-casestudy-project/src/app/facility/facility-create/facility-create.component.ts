@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomerType} from "../../model/customerType";
-import {CustomerService} from "../../service/customer.service";
-import {CustomerTypeService} from "../../service/customer-type.service";
 import {Router} from "@angular/router";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {FacilityService} from "../../service/facility.service";
 import {FacilityTypeService} from "../../service/facility-type.service";
 import {RentTypeService} from "../../service/rent-type.service";
@@ -25,18 +23,18 @@ export class FacilityCreateComponent implements OnInit {
               private router: Router) {
     this.facilityForm = new FormGroup(
       {
-        id: new FormControl(),
-        name: new FormControl(),
-        area : new FormControl(),
-        cost: new FormControl(),
-        maxPeople: new FormControl(),
-        standardRoom: new FormControl(),
-        descriptionOtherConvenience : new FormControl(),
-        poolArea : new FormControl(),
-        numberOfFloor : new FormControl(),
-        facilityFree : new FormControl(),
-        rentTypeId : new FormControl(),
-        facilityTypeId : new FormControl()
+        id: new FormControl("",Validators.required),
+        name: new FormControl("",Validators.required),
+        area : new FormControl("",Validators.required),
+        cost: new FormControl("",Validators.required),
+        maxPeople: new FormControl("",Validators.required),
+        standardRoom: new FormControl("",Validators.required),
+        descriptionOtherConvenience : new FormControl("",Validators.required),
+        poolArea : new FormControl("",Validators.required),
+        numberOfFloor : new FormControl("",Validators.required),
+        facilityFree : new FormControl("",Validators.required),
+        rentTypeId : new FormControl("",Validators.required),
+        facilityTypeId : new FormControl("",Validators.required)
       })
   }
 
@@ -59,4 +57,6 @@ export class FacilityCreateComponent implements OnInit {
       this.router.navigateByUrl('/facility/list')
     })
   }
+
+
 }
