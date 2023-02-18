@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ProductType} from "../../model/product-type";
 import {ProductService} from "../../service/product.service";
 import {ProductTypeService} from "../../service/product-type.service";
@@ -13,12 +13,12 @@ import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 export class ProductEditComponent implements OnInit {
 
   productForm : FormGroup = new FormGroup({
-    name: new FormControl(),
-    stock: new FormControl(),
-    brands: new FormControl(),
-    price: new FormControl(),
-    color: new FormControl(),
-    productType: new FormControl()
+    name: new FormControl("",Validators.required),
+    stock: new FormControl("",Validators.required),
+    brands: new FormControl("",Validators.required),
+    price: new FormControl("",Validators.required),
+    color: new FormControl("",Validators.required),
+    productType: new FormControl("",Validators.required)
   })
   productTypeList : ProductType[] = []
   productList: ProductType[] = [];

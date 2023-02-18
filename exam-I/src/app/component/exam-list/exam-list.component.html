@@ -26,7 +26,7 @@
                 <a class="nav-link dropdown-toggle float-end" href="#" role="button"
                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="float-end"><a class="text-decoration-none"
-                                                               href="http://localhost:8080/customer">Customer</a></span>
+                                                               href="http://localhost:8080/customer">Facility</a></span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -43,61 +43,60 @@
         </div>
       </div>
       <div class="col-8">
-
-        <form class="d-flex" method="get" action="" method="POST" [formGroup]="searchForm" (ngSubmit)="onSearch()">
-              <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
-          <select class="form-control me-2" name="customerType" formControlName="customerType">
-            <option *ngFor="let item of customerTypeList" [ngValue]="item.name">{{item.name}}</option>
-          </select>
-          <input class="btn btn-outline-success" type="submit" name="action" value="CHECK AVAILABILITY">
-          <input class="btn btn-outline-success" type="button" (click)="resest()" value="RESEST" STYLE="margin-left: 5px">
-
-        </form>
+<!--        <form [formGroup]="searchForm" (ngSubmit)="searchHospital()" novalidate>-->
+<!--          <div class=" d-flex">-->
+<!--            <input formControlName="dateImport" type="search" style="border: solid #EBA850" placeholder="Ngay nhap vien"-->
+<!--                   class="form-control">-->
+<!--            <input formControlName="dateExport" type="search" style="border: solid #EBA850" placeholder="Ngay ra vien"-->
+<!--                   class="form-control">-->
+<!--            <button class=" btn btn-outline-success"   style="border: solid #EBA850"  (keyup.enter)="searchHospital()"> Tìm</button>-->
+<!--          </div>-->
+<!--        </form>-->
       </div>
     </nav>
   </div>
-
 </div>
 <div class="container-fluid" style="background: url(../../../assets/images/slide_h13.jpg);
 background-size:cover; height: 700px">
-  <button class="btn btn-primary" style=" margin: 5px" [routerLink]="['/customer/create']" >Thêm mới hợp đồng</button>
+  <button class="btn btn-primary" style=" margin: 5px" [routerLink]="['/create']" >Thêm mới dịch vụ</button>
 
   <table class="table table-bordered" style="background-color: #f8f9fa;color: black ; border-radius: 10px">
     <thead style="background-color: #f8f9fa;color: black">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Tên khách hàng</th>
-      <th scope="col">ngày sinh </th>
-      <th scope="col">giới tính</th>
-      <th scope="col">CMND</th>
-      <th scope="col">số điện thoại</th>
-      <th scope="col">email</th>
-      <th scope="col">đại chỉ</th>
-      <th scope="col">lọa khách hàng</th>
+      <th scope="col">STT</th>
+      <th scope="col">Mã bệnh án</th>
+      <th scope="col">Mã bệnh nhân</th>
+      <th scope="col">Tên bệnh nhân</th>
+      <th scope="col">Ngày nhập viện </th>
+      <th scope="col">Ngày ra viện</th>
+      <th scope="col">Lý do nhập viện </th>
+      <th scope="col">Phương pháp điều trị </th>
+      <th scope="col">Bác sĩ điều trị</th>
       <th scope="col">Sửa</th>
       <th scope="col">Xoa</th>
+
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let customer of customerList  ">
-      <td>{{customer.id}}</td>
-      <td>{{customer.name}}</td>
-      <td>{{customer.dateOfBirth}}</td>
-      <td>{{customer.gender}}</td>
-      <td>{{customer.idCard}}</td>
-      <td>{{customer.phoneNumber}}</td>
-      <td>{{customer.email}}</td>
-      <td>{{customer.address}}</td>
-      <td>{{customer.customerType?.name}}</td>
+    <tr *ngFor="let hospital of hospitalList , index as item" >
+      <td>{{item+1}}</td>
+      <td>{{hospital.idHospital}}</td>
+      <td>{{hospital.people?.idPeople}}</td>
+      <td>{{hospital.people?.name}}</td>
+      <td>{{hospital.dateImport}}</td>
+      <td>{{hospital.dateExport}}</td>
+      <td>{{hospital.reason}}</td>
+      <td>{{hospital.method}}</td>
+      <td>{{hospital.doctor}}</td>
       <td>
-        <button class="btn btn-outline-warning" [routerLink]="['/customer/update/',customer.id]">Sửa</button>
+        <button class="btn btn-outline-warning" [routerLink]="['/update/',hospital.id]">Sửa</button>
       </td>
       <td>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                (click)="getDataDelete(customer)"
+                (click)="getDataDelete(hospital)"
         >
-          Xóa
+                    Xóa
         </button>
       </td>
     </tr>
@@ -118,13 +117,12 @@ background-size:cover; height: 700px">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
-          <button type="button" class="btn btn-primary" (click)="deleteCustomer(idDelete)" data-bs-dismiss="modal">xoa</button>
+          <button type="button" class="btn btn-primary" (click)="deleteHospital(idDelete)" data-bs-dismiss="modal">xoa</button>
         </div>
       </div>
     </div>
   </div>
-
-  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>
+  <!--  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>-->
 </div>
 
 

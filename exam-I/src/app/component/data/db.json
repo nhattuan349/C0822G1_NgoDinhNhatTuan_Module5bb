@@ -1,0 +1,54 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "idPeople": "435",
+      "name": "Nguyễn Văn A"
+    },
+    {
+      "id": 2,
+      "idPeople": "123",
+      "name": "Nguyễn Văn C"
+    },
+    {
+      "id": 3,
+      "idPeople": "984",
+      "name": "Tôn Nữ D"
+    },
+    {
+      "id": 4,
+      "idPeople": "153",
+      "name": "Đoàn Thị E"
+    }
+  ],
+  "hospital": [
+    {
+      "id": 1,
+      "idHospital": "112",
+      "dateImport": "2016-08-07",
+      "dateExport": "2019-08-08",
+      "reason": "Ưng thư gan giai đoạn cuối",
+      "method": "Mổ",
+      "doctor": "Lê Văn B",
+      "people": {
+        "id": 1,
+        "idPeople": "435",
+        "name": "Nguyễn Văn A"
+      }
+    },
+    {
+      "id": 2,
+      "idHospital": "123",
+      "dateImport": "2019-08-10",
+      "dateExport": "2020-08-10",
+      "reason": "Suy thận mạn",
+      "method": "Chạy thận",
+      "doctor": "Nguyễn Đôn D",
+      "people": {
+        "id": 2,
+        "idPeople": "123",
+        "name": "Nguyễn Văn C"
+      }
+    }
+  ]
+}

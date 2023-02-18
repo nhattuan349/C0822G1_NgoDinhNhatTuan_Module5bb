@@ -67,7 +67,7 @@ export class ProductListComponent implements OnInit {
   }
 
   onSearch(){
-    this.productService.getAllProduct(this.searchForm.value.name,this.searchForm.value.productType).subscribe(data=>{
+    this.productService.getAllProduct(this.searchForm.value.color,this.searchForm.value.productType).subscribe(data=>{
       this.productList =data
       console.log(data)
     })
