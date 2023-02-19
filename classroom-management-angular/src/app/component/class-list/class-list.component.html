@@ -1,0 +1,111 @@
+<p>class-list works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light   ">
+      <div class="col-4">
+        <div class="container-fluid d-flex justify-content-center ">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end "><a class="text-decoration-none"
+                                                                href="http://localhost:8080">Home</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle float-end" href="#" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="float-end"><a class="text-decoration-none"
+                                                               href="http://localhost:8080/customer">Class</a></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+
+
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="container-fluid" style="background: url(../../../assets/images/h3_backgroud.jpg);
+background-size:cover; height: 700px">
+
+  <button class="btn btn-info" routerLink="/create" style="margin-top: 10px; margin-bottom: 10px"> Thêm mới</button>
+  <table class="table table-bordered" style="background-color: #f8f9fa;color: black ; border-radius: 10px">
+    <thead style="background-color: #f8f9fa;color: black">
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Tên khối</th>
+      <th scope="col">Tên Lớp</th>
+      <th scope="col">Sỹ số</th>
+      <th scope="col">Giáo viên chủ nhiệm</th>
+      <th scope="col">Sửa </th>
+      <th scope="col">Xóa </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let classRoom of classList | paginate: { itemsPerPage: 5, currentPage: p}, index as item">
+      <td>{{item+1}}</td>
+      <td>{{classRoom.nameBlock}}</td>
+      <td>{{classRoom.nameClass}}</td>
+      <td>{{classRoom.numberOfMembers}}</td>
+      <td>{{classRoom.homeroomTeacher?.name}}</td>
+
+      <td>
+        <button class="btn btn-outline-warning" [routerLink]="['/update',classRoom.id]">Sửa</button>
+      </td>
+      <td>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="getDataDelete(classRoom)">
+          Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xoa Customer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>bạn muốn xóa {{nameDelete}} không</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">dong</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deletClass(idDelete)">xoa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>
+</div>

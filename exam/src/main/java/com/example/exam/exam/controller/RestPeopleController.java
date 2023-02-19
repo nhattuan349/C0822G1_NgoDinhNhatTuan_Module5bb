@@ -1,5 +1,6 @@
 package com.example.exam.exam.controller;
 
+import com.example.exam.exam.model.Hospital;
 import com.example.exam.exam.model.People;
 import com.example.exam.exam.service.hospital.IPeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +23,11 @@ public class RestPeopleController {
 
     @GetMapping("")
     public ResponseEntity<List<People>> getAll() {
-        List<People> benhNhanList = peopleService.getAll();
-        if (benhNhanList.isEmpty()) {
+        List<People> peopleList = peopleService.findAll();
+        if (peopleList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(benhNhanList, HttpStatus.OK);
+        return new ResponseEntity<>(peopleList, HttpStatus.OK);
     }
 
 }

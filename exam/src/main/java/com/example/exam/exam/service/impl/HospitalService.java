@@ -56,4 +56,9 @@ public class HospitalService implements IHospitalService {
     public void delete(int id) {
         hospitalRepository.delete(id);
     }
+
+    @Override
+    public Page<Hospital> findAllHospitalNoS(Pageable pageable) {
+        return hospitalRepository.findAllHospitalNoS(pageable);
+    }
 }

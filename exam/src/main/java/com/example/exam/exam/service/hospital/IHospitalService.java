@@ -14,5 +14,5 @@ public interface IHospitalService extends IGeneralService<Hospital> {
 //    List<Hospital> findAllHospital();
     void delete(@Param("id") int id);
 
-
+    Page<Hospital> findAllHospitalNoS(Pageable pageable);
 }

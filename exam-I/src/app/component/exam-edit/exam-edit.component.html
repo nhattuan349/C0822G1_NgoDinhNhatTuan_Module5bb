@@ -54,6 +54,7 @@
     <div *ngIf="hospitalForm!=undefined">
       <form [formGroup]="hospitalForm" (ngSubmit)="update(id)">
         <legend>Sửa sản phẩm</legend>
+<input formControlName="id">
         <div class="mb-3">
           <label class="form-label">Tên bệnh nhân</label>
           <select class="form-control form-control-lg" formControlName="people" [compareWith]="comparaFn">

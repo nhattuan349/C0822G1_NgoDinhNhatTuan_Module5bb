@@ -78,7 +78,7 @@ background-size:cover; height: 700px">
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let hospital of hospitalList , index as item" >
+    <tr *ngFor="let hospital of hospitalList | paginate: { itemsPerPage: 5, currentPage: p},  index as item" >
       <td>{{item+1}}</td>
       <td>{{hospital.idHospital}}</td>
       <td>{{hospital.people?.idPeople}}</td>
@@ -122,7 +122,7 @@ background-size:cover; height: 700px">
       </div>
     </div>
   </div>
-  <!--  <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>-->
+    <pagination-controls (pageChange)="p = $event" style="text-align: right"></pagination-controls>
 </div>
 
 

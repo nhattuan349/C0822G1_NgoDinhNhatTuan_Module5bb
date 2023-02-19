@@ -1,17 +1,16 @@
 package com.example.exam.exam.service.impl;
 
-import com.example.exam.exam.model.Hospital;
 import com.example.exam.exam.model.People;
-import com.example.exam.exam.repository.IHospitalRepository;
 import com.example.exam.exam.repository.IPeopleRepository;
-import com.example.exam.exam.service.hospital.IHospitalService;
 import com.example.exam.exam.service.hospital.IPeopleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 @Service
 public class PeopleService implements IPeopleService {
+    @Autowired
     private IPeopleRepository iPeopleRepository;
     @Override
     public List<People> findAll() {

@@ -59,6 +59,7 @@ export class ExamEditComponent implements OnInit {
   }
 
   update(id:number){
+    console.log("đây là id:"+id);
     if (this.hospitalForm != undefined && id != null){
       const hospital = this.hospitalForm.value;
       console.log(hospital)

@@ -1,0 +1,357 @@
+{
+  "teacher": [
+    {
+      "id": 1,
+      "name": "Trần Thùy Linh"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Trần Trúc Ly"
+    },
+    {
+      "id": 3,
+      "name": "Dương Thị Loan"
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Lê Anh Dũng"
+    },
+    {
+      "id": 5,
+      "name": "Hoàng Văn Phúc"
+    },
+    {
+      "id": 6,
+      "name": "Bùi Đình Sang"
+    },
+    {
+      "id": 7,
+      "name": "Nguyễn Khánh Việt"
+    },
+    {
+      "id": 8,
+      "name": "Mai Đức Mạnh"
+    },
+    {
+      "id": 9,
+      "name": "Nguyễn Minh Lộc"
+    },
+    {
+      "id": 10,
+      "name": "Nguyễn Tuấn Linh"
+    },
+    {
+      "id": 11,
+      "name": "Vũ Ngọc Tùng"
+    },
+    {
+      "id": 12,
+      "name": "Trần Thùy Linh"
+    },
+    {
+      "id": 13,
+      "name": "Dương Hùng Anh"
+    },
+    {
+      "id": 14,
+      "name": "Lê Thành Trung"
+    },
+    {
+      "id": 15,
+      "name": "Lê Minh Long"
+    },
+    {
+      "id": 16,
+      "name": "Phạm Ngọc Thạch"
+    },
+    {
+      "id": 17,
+      "name": "Trịnh Lương Việt"
+    },
+    {
+      "id": 18,
+      "name": "Trịnh Tuấn Thành"
+    },
+    {
+      "id": 19,
+      "name": "Lê Quốc Anh"
+    },
+    {
+      "id": 20,
+      "name": "Đinh Khắc Hoàng"
+    },
+    {
+      "id": 21,
+      "name": "Bùi Hồng Anh"
+    },
+    {
+      "id": 22,
+      "name": "Lê Quý Anh"
+    },
+    {
+      "id": 23,
+      "name": "Phan Xuân Hoàng"
+    },
+    {
+      "id": 24,
+      "name": "Vũ Ngọc Dũng"
+    },
+    {
+      "id": 25,
+      "name": "Đoan Thanh Tuấn"
+    }
+
+  ],
+  "class": [
+    {
+      "id": 1,
+      "nameBlock": "Khối 1",
+      "nameClass": "1A",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 1,
+        "name": "Trần Thùy Linh"
+      }
+    },
+    {
+      "id": 2,
+      "nameBlock": "Khối 1",
+      "nameClass": "1B",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 2,
+        "name": "Nguyễn Trần Trúc Ly"
+      }
+    },
+    {
+      "id": 3,
+      "nameBlock": "Khối 1",
+      "nameClass": "1C",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 3,
+        "name": "Dương Thị Loan"
+      }
+    },
+    {
+      "id": 4,
+      "nameBlock": "Khối 1",
+      "nameClass": "1D",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 4,
+        "name": "Bùi Hồng Anh"
+      }
+    },
+    {
+      "id": 5,
+      "nameBlock": "Khối 1",
+      "nameClass": "1E",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 5,
+        "name": "Hoàng Văn Phúc"
+      }
+    },
+    {
+      "id": 6,
+      "nameBlock": "Khối 2",
+      "nameClass": "2A",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 6,
+        "name": "Bùi Đình Sang"
+      }
+    },
+    {
+      "id": 7,
+      "nameBlock": "Khối 2",
+      "nameClass": "2B",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 7,
+        "name": "Nguyễn Khánh Việt"
+      }
+    },
+    {
+      "id": 8,
+      "nameBlock": "Khối 2",
+      "nameClass": "2C",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 8,
+        "name": "Mai Đức Mạnh"
+      }
+    },
+    {
+      "id": 9,
+      "nameBlock": "Khối 2",
+      "nameClass": "2D",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 9,
+        "name": "Nguyễn Minh Lộc"
+      }
+    },
+    {
+      "id": 10,
+      "nameBlock": "Khối 2",
+      "nameClass": "2E",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 10,
+        "name": "Nguyễn Tuấn Linh"
+      }
+    },
+    {
+      "id": 11,
+      "nameBlock": "Khối 3",
+      "nameClass": "3A",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 11,
+        "name": "Vũ Ngọc Tùng"
+      }
+    },
+    {
+      "id": 12,
+      "nameBlock": "Khối 3",
+      "nameClass": "3B",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 12,
+        "name": "Trần Thùy Linh"
+      }
+    },
+    {
+      "id": 13,
+      "nameBlock": "Khối 3",
+      "nameClass": "3C",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 13,
+        "name": "Dương Hùng Anh"
+      }
+    },
+    {
+      "id": 14,
+      "nameBlock": "Khối 3",
+      "nameClass": "3D",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 14,
+        "name": "Lê Thành Trung"
+      }
+    },
+    {
+      "id": 15,
+      "nameBlock": "Khối 3",
+      "nameClass": "3E",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 15,
+        "name": "Lê Minh Long"
+      }
+    },
+    {
+      "id": 16,
+      "nameBlock": "Khối 4",
+      "nameClass": "4A",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 16,
+        "name": "Phạm Ngọc Thạch"
+      }
+    },
+    {
+      "id": 17,
+      "nameBlock": "Khối 4",
+      "nameClass": "4B",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 17,
+        "name": "Trịnh Lương Việt"
+      }
+    },
+    {
+      "id": 18,
+      "nameBlock": "Khối 4",
+      "nameClass": "4C",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 18,
+        "name": "Trịnh Tuấn Thành"
+      }
+    },
+    {
+      "id": 19,
+      "nameBlock": "Khối 4",
+      "nameClass": "4D",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 19,
+        "name": "Lê Quốc Anh"
+      }
+    },
+    {
+      "id": 20,
+      "nameBlock": "Khối 4",
+      "nameClass": "4E",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 20,
+        "name": "Đinh Khắc Hoàng"
+      }
+    },
+    {
+      "id": 21,
+      "nameBlock": "Khối 5",
+      "nameClass": "5A",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 21,
+        "name": "Bùi Hồng Anh"
+      }
+    },
+    {
+      "id": 22,
+      "nameBlock": "Khối 5",
+      "nameClass": "5B",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 22,
+        "name": "Lê Quý Anh"
+      }
+    },
+    {
+      "id": 23,
+      "nameBlock": "Khối 2",
+      "nameClass": "5C",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 23,
+        "name": "Phan Xuân Hoàng"
+      }
+    },
+    {
+      "id": 24,
+      "nameBlock": "Khối 5",
+      "nameClass": "5D",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 24,
+        "name": "Vũ Ngọc Dũng"
+      }
+    },
+    {
+      "id": 25,
+      "nameBlock": "Khối 2",
+      "nameClass": "2E",
+      "numberOfMembers": "23",
+      "homeroomTeacher": {
+        "id": 25,
+        "name": "Đoan Thanh Tuấn"
+      }
+    }
+  ]
+}
