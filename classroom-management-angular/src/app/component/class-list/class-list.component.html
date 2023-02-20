@@ -44,7 +44,15 @@
       </div>
       <div class="col-8">
 
-
+        <form class="d-flex" method="get" action=""  method="post" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+          <input placeholder="Name" class="form-control me-2" type="text" name="name" formControlName="name">
+          <select class="form-control me-2" name="productType" formControlName="productType">
+            <option></option>
+            <option *ngFor="let item of productTypeList" [ngValue]="item.name">{{item.name}}</option>
+          </select>
+          <input class="btn btn-outline-success" type="submit" name="action" value="CHECK AVAILABILITY">
+          <input class="btn btn-outline-success" type="button" (click)="resest()" value="RESEST" STYLE="margin-left: 5px">
+        </form>
       </div>
     </nav>
   </div>

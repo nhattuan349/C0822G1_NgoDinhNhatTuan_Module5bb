@@ -11,6 +11,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from "ngx-pagination";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+// import {environment} from "../environments/environment";
+// import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+// import {AngularFireModule} from "@angular/fire/compat";
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
